@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>stiam.ro</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/jquery.mobile-1.3.1.min.css" />
+  <link rel="stylesheet" href="assets/css/index.min.css" />
+</head>
+<body>
+
+<div data-role="page" id="main-page" style="display: none">
+
+  <div data-role="header" id="header" class="ui-bar-c" data-position="fixed">
+    <a href="#left-panel" data-shadow="false" data-icon="bars" data-iconpos="left" data-iconshadow="false">0</a>
+    <a href="#right-panel" data-shadow="false" data-icon="gear" data-iconpos="notext" data-iconshadow="false">Setari</a>
+    <a href="#" data-shadow="false" data-icon="refresh" data-iconpos="notext" data-iconshadow="false">Actualizare</a>
+    <span class="ui-title">stiam.ro</span>
+  </div>
+
+  <div data-role="content" class="page" id="body">
+    <div class="container"></div>
+  </div>
+
+  <div data-role="panel" id="left-panel" data-position-fixed="true">
+    <form id="left-form">
+      <fieldset id="categories" data-role="controlgroup" data-iconpos="right">
+        <legend>Categorie</legend>
+      </fieldset>
+      <fieldset id="sources" data-role="controlgroup" data-iconpos="right">
+        <legend>Sursa</legend>
+      </fieldset>
+    </form>
+  </div>
+
+  <div data-role="panel" id="right-panel" data-position="right" data-position-fixed="true">
+    <form id="right-form">
+      <div class="settings-header">Setări</div>
+
+      <label for="showImages">Afişează imaginile</label>
+      <div class="formHelp">Această opţiune este utilă dacă sunteţi conectat la internet prin 3G şi doriţi să limitaţi traficul de date</div>
+      <select name="showImages" id="showImages" data-role="slider">
+        <option value="off">Nu</option>
+        <option value="on" selected="">Da</option>
+      </select>
+
+      <label for="infiniteScroll">Scroll infinit</label>
+      <div class="formHelp">Această opţiune vă permite să încărcaţi următoarele 20 de ştiri in pagina curentă făra a fi nevoie să apăsaţi vreun buton</div>
+      <select name="infiniteScroll" id="infiniteScroll" data-role="slider">
+        <option value="off">Nu</option>
+        <option value="on" selected="">Da</option>
+      </select>
+
+      <label for="fontSize">Zoom</label>
+      <div class="formHelp">Această opţiune vă permite să ajustaţi mărimea fontului (în %)</div>
+      <input type="number" data-type="range" name="fontSize" id="fontSize" value="100" min="50" max="200" step="10" data-highlight="true"/>
+
+      <label for="theme" class="select">Temă</label>
+      <div class="formHelp">Această opţiune vă permite să schimbaţi tema de culori a aplicaţiei</div>
+      <select name="theme" id="theme" data-native-menu="false">
+          <option value="a" selected="">Neagră</option>
+          <option value="b">Albastră</option>
+          <option value="c">Albă</option>
+          <option value="d">Gri</option>
+          <option value="e">Galbenă</option>
+      </select>
+
+    </form>
+  </div>
+
+</div>
+
+<div data-role="page" id="article-page" data-add-back-btn="true" data-back-btn-text="înapoi" style="display: none">
+  <div data-role="header" class="ui-bar-c" data-position="fixed">
+    <a href="#" data-shadow="false" data-icon="star" data-iconpos="notext" data-iconshadow="false" class="ui-btn-right">Share</a>
+    <span class="ui-title" />
+  </div>
+  <div data-role="content" id="article-details">
+    <img class="loading" src="assets/css/images/ajax-loader-2.gif" alt="Se incarca..." title="Se incarca..."/>
+  </div>
+</div>
+
+<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="share.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="GAPlugin.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/jquery.mobile-1.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/jquery.masonry.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="assets/js/index.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
