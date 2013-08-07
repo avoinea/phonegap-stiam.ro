@@ -1,6 +1,4 @@
-PhoneGap-Start
+stiam.ro - phonegap build
 ---
 
-A starting point for PhoneGap apps.
-
-To get started: fork this repo, modify the config.xml to match your details, and get building!
+stiam.ro multiplatform buildout
